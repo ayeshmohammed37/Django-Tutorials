@@ -1,0 +1,40 @@
+Django Tutorial
+  $ talking about django and what is used for
+  in this tutorial we will build blog app using django that contains
+    - Home page (blog posts update or delete them)
+    - authentication system (log in - log out - register - forget password link)
+    - profile (you can update profile info)
+    - access admin page
+  we will learn how to work with databases, create authentication system
+  so let's get started
+
+so we will start make our virtual environmint and install packgages that we need
+  - first we will make our virenv we will call it a django_env and activate it
+  - install django (-> pip install django)
+
+let's start our project (and take overview of the project files)
+  - create a project using django admin (django-admin startproject django_project)
+  - go to the project dirctory and run this command (tree /f) to see the files tree 
+    in your project
+  - you will find files 
+    - manage.py that allow us run command line commands (don't make any changes to this file)
+    - we have dir django_project\ (same as the name of our project)
+      - __init__.py (it's an empty file, this file just tells python that is a python package)
+      - settings.py (where we'll change different settings and configurations)
+      - urls.py (where we'll set up the mapping from certain URLs to where we sent the user)
+      - wsgi.py (is how our python web application and web server communicate)
+   
+let's open up the default website in out browser using manage.py
+  - run our server to access our site (python manage.py runserver)
+  - we can access our site by going to this url  http://127.0.0.1:8000/
+  - http://127.0.0.1:8000/  (127.0.0.1 = localhost = our local computer that we're currently on)
+  - acces to the admin page (the urls file has an admin route)
+  - path('admin/', admin.site.urls) when we go to admin it's going to admin.site.urls 
+    and the logic with that location handle the route further, in the future
+    we will add more routes, 
+  - stop the server (ctrl + c)
+  - when the server run on debug mode like this one it should automatically reload 
+    any changes that we make to our code so sometimes when we have some troubles 
+    we need to relod the server
+    
+
