@@ -36,5 +36,43 @@ let's open up the default website in out browser using manage.py
   - when the server run on debug mode like this one it should automatically reload 
     any changes that we make to our code so sometimes when we have some troubles 
     we need to relod the server
-    
+
+______________________________________________________________________________________________________
+
+add blog application to my django site
+setting up url routes
+
+  # create blog app (single project can contain multiple apps)
+    - run command -> python manage.py startapp blog
+  
+  # working with views
+    - import response
+    - make home function wich will handle the traffic from the home page of
+      our blog
+        - write the logic for how we want to handle when a user
+          goes to our blog homepage
+
+  # create urls.py (to map the urls that we want to correspond to each view function)
+    - connect the home view with a certain url 
+      which is home path "" empty url
+    - make sure to nameing the route with speicial names like for example ("appname-view")
+    - add the app urls to the project url so when the user open blog route it will map map
+      that to our blog urls which maps to our views
+  
+  # when i navigate into "/blog" it will open project urls.py in the main project
+    so he will go the pattern that maches that, so it's already processed this blog
+    part of the url so it's going rid of that and just send what's remaining to the
+    blog urls then so it's just going to send empty string to blog.urls 
+    in blog urls so search for pattern matches "" so it will be handled by function views.home
+    so at home function will return http response with h1 tag says blog home
+
+
+  # the smae for about page
+
+  # if i want the root server localhost to be my home page
+    just change the url at main project to be ""
+    so when you at the localhost find the pattern "" then send "" to
+    blog.url then at home function 
+
+______________________________________________________________________________________________________
 
